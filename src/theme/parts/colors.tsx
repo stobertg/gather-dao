@@ -1,6 +1,7 @@
 export const colors = {
   black700: '#161618',
   white: '#fff',
+  gray300: '#333',
 
 
 
@@ -16,7 +17,6 @@ export const colors = {
   gray50: 'hsl( 210, 6%, 93% )',
   gray100: 'hsl( 220, 8%, 86% )',
   gray200: 'hsl( 218, 7%, 79% )',
-  gray300: 'hsl( 220, 8%, 72% )',
   gray400: 'hsl( 219, 8%, 65% )',
   gray500: 'hsl( 222, 5%, 46% )',
   gray600: 'hsl( 220, 8%, 29% )',

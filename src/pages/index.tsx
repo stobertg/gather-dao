@@ -1,11 +1,14 @@
 import type { NextPage } from 'next'
-import { SiteContainer, Block, BlockItem, Heading, Text } from '@components'
+import { SiteContainer, Block, Hero, BlockItem, Heading, Text } from '@components'
 
 const Home: NextPage = () => {
   return (
     
     <SiteContainer blockSpacing="l1">
-      <Block width="medium">This is some content</Block>
+      <Block outline width="medium">
+        <Hero image="/locations/edinburugh.jpg" imageAlt="Edinburugh" />
+        This is some content
+      </Block>
     </SiteContainer>
 
   )
