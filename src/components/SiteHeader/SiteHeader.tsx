@@ -38,6 +38,11 @@ const Nav = styled('nav', {
   }
 })
 
+const Side = styled('div', {
+  display: 'flex',
+  width: '20%'
+})
+
 // ---------- This is the end of declarations ---------- //
 
 export const SiteHeader = () => {
@@ -45,7 +50,7 @@ export const SiteHeader = () => {
 
     <Header>
       <Nav>
-        <Logo variant="logo-mark" />
+        <Side><Logo size="l2" variant="logo-mark" /></Side>
         <AvatarList 
           layout="stacked"
           direction="horizontal"
@@ -59,7 +64,7 @@ export const SiteHeader = () => {
             { name: 'Ashley Ozburn' },
           ]}
         />  
-        <MenuButton />
+        <Side><MenuButton /></Side>
       </Nav>
     </Header>
 

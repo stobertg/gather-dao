@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     
     <SiteContainer blockSpacing="l1">
-      This is some content
+      <Block width="medium">This is some content</Block>
     </SiteContainer>
 
   )

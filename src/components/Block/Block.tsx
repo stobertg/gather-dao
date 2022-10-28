@@ -8,7 +8,6 @@ const BlockWrap = styled('div', {
   display: 'flex',
   position: 'relative',
   width: '100%',
-  color: '$indigo800'
 })
 
 // For all of the content within the site
