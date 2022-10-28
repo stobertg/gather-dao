@@ -4,20 +4,21 @@
 
 export const Typeface = [
   {
-    fontFamily: 'Labil-Medium',
-    src: 'local("Labil-Medium"), url("/fonts/LabilGrotesk-Medium.woff2")',
+    fontFamily: 'Satoshi-Black',
+    src: 'local("Satoshi-Black"), url("/fonts/Satoshi-Black.woff2")',
+  },
+
+  {
+    fontFamily: 'Satoshi-Bold',
+    src: 'local("Satoshi-Bold"), url("/fonts/Satoshi-Bold.woff2")',
   },
   {
-    fontFamily: 'Labil-Medium-Italic',
-    src: 'local("Labil-Medium-Italic"), url("/fonts/LabilGrotesk-MediumItalic.woff2")',
+    fontFamily: 'Satoshi-Italic',
+    src: 'local("Satoshi-Italic"), url("/fonts/Satoshi-Italic.woff2")',
   },
   {
-    fontFamily: 'Labil-Regular',
-    src: 'local("Labil-Regular"), url("/fonts/LabilGrotesk-Regular.woff2")',
-  },
-  {
-    fontFamily: 'Labil-Regular-Italic',
-    src: 'local("Labil-Regular-Italic"), url("/fonts/LabilGrotesk-RegularItalic.woff2")',
+    fontFamily: 'Satoshi-Regular',
+    src: 'local("Satoshi-Regular"), url("/fonts/Satoshi-Regular.woff2")',
   },
   {
     fontFamily: 'code',
@@ -26,9 +27,10 @@ export const Typeface = [
 ]
 
 export const fonts = {
-  sansSerif: 'Labil-Regular',
-  sansSerifItalic: 'Labil-Regular-Italic',
-  sansSerifBold: 'Labil-Medium',
+  sansSerif: 'Satoshi-Regular',
+  sansSerifItalic: 'Satoshi-Italic',
+  sansSerifBold: 'Satoshi-Bold',
+  sansSerifHeavy: 'Satoshi-Black',
   serif: 'Source Serif 4',
   code: 'code'
 }
