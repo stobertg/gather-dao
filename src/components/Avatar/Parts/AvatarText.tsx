@@ -38,8 +38,14 @@ const AvatarName = styled('span', {
       stacked: { 
         span: { 
           display: 'block', 
-          '&:first-child': { marginBottom: 2, color: '$gray700', fontSize: 12 }},
-          '&:last-child': { fontSize: '$s0' }
+          '&:first-child': { 
+            fontFamily: '$serif', 
+            marginBottom: 2, 
+            color: '$gray500', 
+            fontSize: 12 
+          },
+          '&:last-child': { fontSize: '$s1' }
+        }
       }
     }
   }

@@ -7,7 +7,6 @@ export const Typeface = [
     fontFamily: 'Satoshi-Black',
     src: 'local("Satoshi-Black"), url("/fonts/Satoshi-Black.woff2")',
   },
-
   {
     fontFamily: 'Satoshi-Bold',
     src: 'local("Satoshi-Bold"), url("/fonts/Satoshi-Bold.woff2")',
@@ -21,6 +20,10 @@ export const Typeface = [
     src: 'local("Satoshi-Regular"), url("/fonts/Satoshi-Regular.woff2")',
   },
   {
+    fontFamily: 'Source-Serif-4',
+    src: 'local("Source-Serif-4"), url("/fonts/SourceSerif4.ttf")',
+  },
+  {
     fontFamily: 'code',
     src: 'local("Labil-Regular-Italic"), url("/fonts/SourceCodePro-Regular.ttf")',
   }
@@ -31,7 +34,7 @@ export const fonts = {
   sansSerifItalic: 'Satoshi-Italic',
   sansSerifBold: 'Satoshi-Bold',
   sansSerifHeavy: 'Satoshi-Black',
-  serif: 'Source Serif 4',
+  serif: 'Source-Serif-4',
   code: 'code'
 }
 

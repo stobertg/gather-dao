@@ -6,7 +6,9 @@ import { Logo, AvatarList, MenuButton } from '@components'
 // This holds a relative position 
 
 const Header = styled('header', {
-  position: 'absolute',
+  position: 'fixed',
+  top: 0,
+  left: 0,
   width: '100vw',
   zIndex: 9000
 })
@@ -21,7 +23,7 @@ const Nav = styled('nav', {
   position: 'relative',
   width: '92%',
   margin: '0 auto',
-  padding: '32px 0',
+  padding: '12px 0',
 
   '> div:nth-child( 2 )': {
     maxWidth: 930,
@@ -43,13 +45,21 @@ export const SiteHeader = () => {
 
     <Header>
       <Nav>
-        <Logo />
+        <Logo variant="logo-mark" />
         <AvatarList 
           layout="stacked"
+          direction="horizontal"
           avatars={[
-            { name: 'Tyler Stober' }
+            { name: 'Jamal Alkirnawi' },
+            { name: 'Diana Alroker' },
+            { name: 'Miriam Famau' },
+            { name: 'Lisa Dush' },
+            { name: 'Dieudomne Allo' },
+            { name: 'Raymond Richard' },
+            { name: 'Ashley Ozburn' },
           ]}
         />  
+        <MenuButton />
       </Nav>
     </Header>
 
