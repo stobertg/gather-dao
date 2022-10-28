@@ -1,1 +1,4 @@
-export const darkThemeColors = {}
+export const darkThemeColors = {
+  siteBg: '$black700',
+  siteColor: '$white'
+}

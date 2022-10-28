@@ -43,7 +43,13 @@ export const SiteHeader = () => {
 
     <Header>
       <Nav>
-        
+        <Logo />
+        <AvatarList 
+          layout="stacked"
+          avatars={[
+            { name: 'Tyler Stober' }
+          ]}
+        />  
       </Nav>
     </Header>
 

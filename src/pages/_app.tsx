@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { ThemeProvider } from 'next-themes'
 import type { AppProps } from 'next/app'
-import { styled, globalStyles, lightTheme, darkTheme } from '@theme'
+import { globalStyles, lightTheme, darkTheme } from '@theme'
 import { LeftNav, Stage } from '@components'
 
 // const SiteWrap = styled('div', {
@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       disableTransitionOnChange
       attribute="class"
       value={{ light: lightTheme, dark: darkTheme }}
-      enableSystem={ false }
+      enableSystem={ true }
     >
       <Component {...pageProps} />
       {/* <SiteWrap>

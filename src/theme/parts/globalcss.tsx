@@ -20,8 +20,8 @@ export const globalStyle = {
     margin: 0,
     lineHeight: 1,
     fontSize: '1rem',
-    background: '$white50',
-    color: '$textPrimary'
+    background: '$siteBg',
+    color: '$siteColor'
   },
 
   a: { 

@@ -1,4 +1,9 @@
 export const colors = {
+  black700: '#161618',
+  white: '#fff',
+
+
+
   indigo50: 'hsl( 240, 11%, 96% )',
   indigo100: 'hsl( 225, 13%, 94% )',
   indigo200: 'hsl( 240, 7%, 81% )',

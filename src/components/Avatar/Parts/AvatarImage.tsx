@@ -30,6 +30,7 @@ const Avatar = styled(AvatarPrimitive.Root, {
   minHeight: 32,
   height: 32,
   userSelect: 'none',
+  color: '$siteBg',
 
   '&:hover': {
     '> div:last-child': { transform: 'scale( 1, 1 )' }
