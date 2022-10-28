@@ -1,6 +1,6 @@
 import React from 'react'
 import * as AvatarPrimitive from '@radix-ui/react-avatar'
-import { styled } from '../../../../stitches.config'
+import { styled } from '@theme'
 import { Heading, Button } from '@components'
 
 /* 
@@ -177,12 +177,12 @@ export const AvatarImage = ({
       <AvatarFallback delayMs={600}>
         { 
           name ? ( <>{ firstName?.[0] }{ lastName?.[0] }</> ) 
-          : userName ? ( <Heading title={ userName[0] } bold="bold" /> ) 
+          : userName ? ( <Heading title={ userName[0] } bold /> ) 
           : ( <>{ cryptoAddress[0] }</> )
         }
       </AvatarFallback>
       
-      { chatThumb ? ( <ChatDismiss><Button size="l0Icon" icon="cross-1" /></ChatDismiss> ) : null}
+      { chatThumb ? ( <ChatDismiss><Button icon="cross-1" /></ChatDismiss> ) : null}
       { active ? ( <ActiveIndicator /> ) : null }
     </Avatar>
 

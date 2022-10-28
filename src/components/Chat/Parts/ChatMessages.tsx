@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '../../../../stitches.config'
+import { styled } from '@theme'
 import { List } from '@components'
 import { ChatBubble } from './ChatBubble'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '../../../stitches.config'
+import { styled } from '@theme'
 import { Chat, Avatar, Button, List } from '@components'
 
 const ChatContainer = styled('div', {
@@ -76,7 +76,7 @@ export const ChatGlobal = ({
               <li key={`chat-${ i }`}>
                 <Avatar 
                   chatThumb
-                  buttonVariant="noStyle"
+                  buttonVariant="secondary"
                   nameHidden
                   size="l1"
                   image={ chat.image }
@@ -88,7 +88,7 @@ export const ChatGlobal = ({
             ))}
           </List>
         </Users>
-        <Button variant="icon" icon="pencil-1" />
+        <Button variant="primary" icon="pencil-1" />
       </ChatList>
     </ChatContainer>
     

@@ -4,13 +4,13 @@ import type { AppProps } from 'next/app'
 import { styled, globalStyles, lightTheme, darkTheme } from '@theme'
 import { LeftNav, Stage } from '@components'
 
-const SiteWrap = styled('div', {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'flex-end',
-  position: 'relative',
-  width: '100vw'
-})
+// const SiteWrap = styled('div', {
+//   display: 'flex',
+//   flexDirection: 'row',
+//   justifyContent: 'flex-end',
+//   position: 'relative',
+//   width: '100vw'
+// })
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => { globalStyles() }, [])
@@ -22,11 +22,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       value={{ light: lightTheme, dark: darkTheme }}
       enableSystem={ false }
     >
-      <SiteWrap>
+      <Component {...pageProps} />
+      {/* <SiteWrap>
         <LeftNav />
         <Stage><Component {...pageProps} /></Stage>
-        {/* <Footer /> */}
-      </SiteWrap>
+        <Footer /> 
+      </SiteWrap> */}
     </ThemeProvider>
   )
 

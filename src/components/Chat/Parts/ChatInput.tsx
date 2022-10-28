@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '../../../../stitches.config'
+import { styled } from '@theme'
 import { Button } from '@components'
 
 // For the master container of the inout section at the bottom of the chat
@@ -49,9 +49,9 @@ export const ChatInput = ({
 
     <InputWrap>
       <InputContent>
-        <Button variant="icon" icon="image" />
+        <Button variant="primary" icon="image" />
         <Input placeholder="Aa" />
-        <Button variant="icon" icon="paper-plane" />
+        <Button variant="primary" icon="paper-plane" />
       </InputContent>
     </InputWrap>
     

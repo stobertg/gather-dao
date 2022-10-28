@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '../../../../stitches.config'
+import { styled } from '@theme'
 import { Avatar, Button } from '@components'
 
 // For the master container of the chat header
@@ -68,12 +68,14 @@ const HeaderActions = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface ChatHeaderProps {
+  active?: boolean
   name?: string
 }
 
 // ---------- This is the end of declarations ---------- //
 
 export const ChatHeader = ({
+    active,
     name
   }: ChatHeaderProps ) => {
   
@@ -81,12 +83,12 @@ export const ChatHeader = ({
 
     <HeaderContain>
       <HeaderContent>
-        <Avatar active name={ name } nameSize="l0" />
+        <Avatar {...{ active, name }} nameSize="l0" />
 
         <HeaderActions>
-          <Button variant="icon" icon="minus-circled" />
-          <Button variant="icon" icon="video" />
-          <Button variant="icon" icon="cross-1" />
+          <Button variant="primary" icon="minus-circled" />
+          <Button variant="primary" icon="video" />
+          <Button variant="primary" icon="cross-1" />
         </HeaderActions>
       </HeaderContent>
     </HeaderContain>

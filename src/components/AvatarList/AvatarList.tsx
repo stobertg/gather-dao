@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '../../../stitches.config'
+import { styled } from '@theme'
 import { Avatar, List, Button } from '@components'
 
 const AvatarWrap = styled('div', {

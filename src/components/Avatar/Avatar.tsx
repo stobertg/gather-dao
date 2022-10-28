@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '../../../stitches.config'
+import { styled } from '@theme'
 import { AvatarImage } from './Parts/AvatarImage'
 import { AvatarText } from './Parts/AvatarText'
 import { Button } from '@components'
@@ -47,7 +47,7 @@ interface AvatarProps {
   nameSize?: 'l0'
   nameOnly?: boolean
   onClick?: React.MouseEventHandler<HTMLButtonElement>
-  buttonVariant?: 'noStyle'
+  buttonVariant?: "primary" | "secondary" | "disabled" | "danger"
   chatThumb?: boolean
 }
 

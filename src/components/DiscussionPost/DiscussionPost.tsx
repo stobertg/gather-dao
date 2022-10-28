@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '../../../stitches.config'
+import { styled } from '@theme'
 import { Avatar, ButtonContainer, Button, Text } from '@components'
 
 // For the mast container of the discussion board post
@@ -81,8 +81,8 @@ export const DiscussionPost = ({
         </Text>
 
         <ButtonContainer>
-          <Button variant="iconOutline" icon="heart" />
-          <Button variant="outline" title="Comment" icon="chat-bubble" />
+          <Button variant="primary" icon="heart" />
+          <Button variant="secondary" title="Comment" icon="chat-bubble" />
         </ButtonContainer>
       </PostContent>
     </PostWrap>

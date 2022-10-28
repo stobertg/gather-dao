@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from '../../../../stitches.config'
+import { styled } from '@theme'
 import { truncateCryptoAddress } from '../../../lib/utils'
 import { Heading } from '@components'
 
@@ -73,6 +73,7 @@ interface AvatarTextProps {
   timeStamp?: string
   nameSize?: 'l0'
   nameOnly?: boolean
+  active?: boolean
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -111,7 +112,7 @@ export const AvatarText = ({
                 }
               </> 
             ) 
-            : userName ? ( <Heading title={ userName } bold="bold" /> ) 
+            : userName ? ( <Heading title={ userName } bold /> ) 
             : ( <strong>{ truncateCryptoAddress( cryptoAddress ) }</strong> )
           }
         </AvatarName>
@@ -130,7 +131,7 @@ export const AvatarText = ({
                     }
                   </> 
                 ) 
-                : userName ? ( <Heading title={ userName } bold="bold" /> ) 
+                : userName ? ( <Heading title={ userName } bold /> ) 
                 : ( <strong>{ truncateCryptoAddress( cryptoAddress ) }</strong> )
               }
 
