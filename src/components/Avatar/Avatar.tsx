@@ -35,7 +35,6 @@ interface AvatarProps {
   size?: 'l0' | 'l1'
   layout?: 'stacked'
   image?: string
-  imageAlt?: string
   name?: string
   userName?: string
   cryptoAddress?: any
@@ -55,7 +54,6 @@ interface AvatarProps {
 
 export const Avatar = ({
     image, // Optional - for the image of the user
-    imageAlt, // Optional - for the accessibilty alt text of the image used for the user
     name, // Optional - Supporting the name of the user
     userName, // Optional - Supporting the username of the user
     cryptoAddress, // Optional - Supporting the user to be identified by their crypto address
@@ -80,7 +78,7 @@ export const Avatar = ({
 
         <Button variant={ buttonVariant } onClick={ () => onClick }>
           <AvatarWrap aria-label={ name || userName || cryptoAddress }>
-            <AvatarImage {...{ image, imageAlt, name, userName, cryptoAddress, size, active, chatThumb }} />
+            <AvatarImage {...{ image, name, userName, cryptoAddress, size, active, chatThumb }} />
             <AvatarText {...{ name, userName, cryptoAddress, layout, nameHidden, notBold, timeStamp, date, nameOnly, nameSize }} />
           </AvatarWrap>
         </Button>
@@ -88,7 +86,7 @@ export const Avatar = ({
       ) : (
 
         <AvatarWrap aria-label={ name || userName || cryptoAddress }>
-          <AvatarImage {...{ image, imageAlt, name, userName, cryptoAddress, size, active, chatThumb }} />
+          <AvatarImage {...{ image, name, userName, cryptoAddress, size, active, chatThumb }} />
           <AvatarText {...{ name, userName, cryptoAddress, layout, nameHidden, notBold, timeStamp, date, nameOnly, nameSize }} />
         </AvatarWrap>
 

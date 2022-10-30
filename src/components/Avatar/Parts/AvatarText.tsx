@@ -3,20 +3,6 @@ import { styled } from '@theme'
 import { truncateCryptoAddress } from '../../../lib/utils'
 import { Heading } from '@components'
 
-/* 
-  *** ReadMe ***
-
-  The avatar component is used as a primitive from RadixUi component library. This is not used at the moment but is there for 
-  scalable solution if the microsite is built out. 
-
-  The component contains the following features: 
-  • Profile image
-  • Profile image fallback if no image is present
-  • Name, username, or crypto address the user wants to identify as
-
-  *** End ReadMe ***
-*/
-
 // For the name of the user attached with the avatar, on the right side of the container
 // This holds the name, username, or crypto address
 
@@ -24,7 +10,6 @@ const AvatarName = styled('span', {
   position: 'relative',
   width: '100%',
   whiteSpace: 'nowrap',
-  strong: { fontFamily: '$sansSerifBold' },
 
   // Here we create a variant for the text within the Avatar to be stacked
   // By default the text layout is horizontal
@@ -36,16 +21,7 @@ const AvatarName = styled('span', {
 
     layout: {
       stacked: { 
-        span: { 
-          display: 'block', 
-          '&:first-child': { 
-            fontFamily: '$serif', 
-            marginBottom: 2, 
-            color: '$gray500', 
-            fontSize: 12 
-          },
-          '&:last-child': { fontSize: '$s1' }
-        }
+        'div:first-child': { marginBottom: 3 }
       }
     }
   }
@@ -53,10 +29,10 @@ const AvatarName = styled('span', {
 
 const TimeStamp = styled('div', {
   position: 'relative',
-  marginTop: 4,
-  color: '$gray200',
+  marginTop: 8,
+  color: '$gray400',
   fontFamily: '$sansSerif',
-  fontSize: '$s1',
+  fontSize: '$s0',
 
   // For the spacing 
 
@@ -101,6 +77,31 @@ export const AvatarText = ({
   const fullName = name ? name : null
   const firstName = fullName?.split(' ')[0]
   const lastName = fullName?.split(' ')[1]
+
+  const AvatarBase = () => {
+    return(
+      <>
+        { 
+          name ? ( 
+            <>
+              { 
+                notBold ? ( <><Heading title={ firstName } /><Heading title={ lastName } /></> )
+                : layout == 'stacked' ? ( 
+                  <>
+                    <Heading size="l0" color="gray" font="serif" title={ firstName } />
+                    <Heading size="l1" heavy title={ lastName } />
+                  </> 
+                ) 
+                : ( <Heading heavy title={`${ firstName } ${ lastName }`} /> )
+              }
+            </> 
+          ) 
+          : userName ? ( <Heading heavy title={ userName } /> ) 
+          : ( <strong>{ truncateCryptoAddress( cryptoAddress ) }</strong> )
+        }
+      </>
+    )
+  }
   
   return(
 
@@ -108,39 +109,14 @@ export const AvatarText = ({
       { nameOnly ? (
 
         <AvatarName {...{ layout, nameSize }}>
-          { 
-            name ? ( 
-              <>
-                { 
-                  notBold ? ( <><Heading title={ firstName } /><Heading title={ lastName } /></> )
-                  : layout == 'stacked' ? ( <><span>{ firstName }</span> <span><strong>{ lastName }</strong></span></> ) 
-                  : ( <><Heading heavy title={ firstName } /><Heading heavy title={ lastName } /></> )
-                }
-              </> 
-            ) 
-            : userName ? ( <Heading heavy title={ userName } /> ) 
-            : ( <strong>{ truncateCryptoAddress( cryptoAddress ) }</strong> )
-          }
+          <AvatarBase />
         </AvatarName>
 
       ) : (
         <>
           { nameHidden ? null : (
             <AvatarName {...{ layout, nameSize }}>
-              { 
-                name ? ( 
-                  <>
-                    { 
-                      notBold ? ( <><span>{ firstName }</span> <span>{ lastName }</span></> )
-                      : layout == 'stacked' ? ( <><span>{ firstName }</span> <span><strong>{ lastName }</strong></span></> ) 
-                      : ( <strong><span>{ firstName }</span> <span>{ lastName }</span></strong> )
-                    }
-                  </> 
-                ) 
-                : userName ? ( <Heading heavy title={ userName } /> ) 
-                : ( <strong>{ truncateCryptoAddress( cryptoAddress ) }</strong> )
-              }
-
+              <AvatarBase />
               { date ? ( <TimeStamp><span>{ date }</span><span>{ timeStamp }</span></TimeStamp> ) : null }
               { active ? ( <TimeStamp>Active now</TimeStamp> ) : null }
             </AvatarName> 

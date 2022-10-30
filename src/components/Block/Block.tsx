@@ -38,7 +38,7 @@ const BlockContent = styled('div', {
     width: {
       tiny: { maxWidth: 600, width: '90%' },
       small: { maxWidth: 800, width: '90%' },
-      medium: { maxWidth: 1024, width: '90%' },
+      medium: { maxWidth: 1100, width: '90%' },
       large: { maxWidth: 1300, width: '90%' }
     },
 

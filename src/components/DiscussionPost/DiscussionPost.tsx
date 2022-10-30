@@ -12,7 +12,7 @@ const PostWrap = styled('div', {
   width: '100%',
   margin: '0 auto',
   background: '#222328',
-  borderRadius: '$r2'
+  borderRadius: '$r3'
 })
 
 // For the container of all of the content within the post
@@ -60,7 +60,7 @@ export const DiscussionPost = ({
           <Avatar 
             size="l1" 
             name="Richard III" 
-            image="/monarchs/richardiii.jpeg" 
+            image="/monarchs/richardiii.jpg" 
             date="05.29.1989"
             timeStamp="12:30 pm"
           />

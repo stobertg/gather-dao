@@ -18,7 +18,6 @@ interface AvatarListProps {
     active?: boolean
     size?: 'l0' | 'l1'
     image?: string
-    imageAlt?: string
     name?: string
     userName?: string
     cryptoAddress?: any
@@ -49,7 +48,6 @@ export const AvatarList = ({
               <Avatar 
                 active={ avatar.active }
                 image={ avatar.image } 
-                imageAlt={ avatar.imageAlt } 
                 name={ avatar.name } 
                 userName={ avatar.userName } 
                 cryptoAddress={ avatar.cryptoAddress} 

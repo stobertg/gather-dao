@@ -50,7 +50,7 @@ const HeroIntro = styled('div', {
   position: 'relative',
   maxWidth: 700,
   width: '100%',
-  margin: '50px auto',
+  margin: '50px auto 0',
 })
 
 const HeroHairline = styled('div', {

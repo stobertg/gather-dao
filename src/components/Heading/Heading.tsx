@@ -11,13 +11,13 @@ const HeadingWrap = styled('div', {
 
   variants: {
     size: {
-      l0: { fontSize: '$s0' },
-      l1: { fontSize: '$s1' },
-      l2: { fontSize: '$s2' },
+      l0: { fontSize: '$s0', lineHeight: 1.1 },
+      l1: { fontSize: '$s1', lineHeight: 1.1 },
+      l2: { fontSize: '$s2', lineHeight: 1.1 },
       l3: { fontSize: '$s3', lineHeight: 1.3 },
-      l4: { fontSize: '$s4' },
+      l4: { fontSize: '$s4', lineHeight: 1.1 },
       l5: { fontSize: '$s5', lineHeight: 1.3 },
-      l6: { fontSize: '$s6' },
+      l6: { fontSize: '$s6', lineHeight: 1.1 },
       l7: { fontSize: '$s7', lineHeight: 1.1 },
       l8: { fontSize: '$s8', lineHeight: 1.1 },
       l9: { fontSize: '$s9', lineHeight: 1.1 },
@@ -27,12 +27,13 @@ const HeadingWrap = styled('div', {
     // For the support of different colors that the heading can be
 
     color: {
-      gray: { color: '$textSecondary' },
+      gray: { color: '$gray400' },
       white: { color: '$white' },
       purple: { color: '$majorelleBlue' }
     },
 
     font: {
+      serif: { fontFamily: '$serif' },
       code: { fontFamily: '$code' }
     }
   }
@@ -50,7 +51,7 @@ interface HeadingProps {
   title: any
   bold?: boolean
   heavy?: boolean
-  font?: 'code'
+  font?: 'code' | 'serif'
 }
 
 // ---------- This is the end of declarations ---------- //
@@ -66,18 +67,11 @@ export const Heading = ({
   
   return(
     
-    <HeadingWrap {...{ size, color }}>
-      { font == 'code' 
-        ? ( <span style={{ fontFamily: 'Source Code Pro' }}>{ title }</span> ) 
-        : ( 
-            <>
-              { 
-                bold ? ( <strong>{ title }</strong> ) : 
-                heavy ? ( <FontHeavy>{ title }</FontHeavy> ) : 
-                <>{ title }</> 
-              }
-            </> 
-          )
+    <HeadingWrap {...{ size, color, font }}>
+      { 
+        bold ? ( <strong>{ title }</strong> ) : 
+        heavy ? ( <FontHeavy>{ title }</FontHeavy> ) : 
+        <>{ title }</> 
       }
     </HeadingWrap>
     
