@@ -31,7 +31,7 @@ const Button = styled('div', {
   alignItems: 'center',
   position: 'relative',
   padding: '16px 20px',
-  borderRadius: '$r0',
+  borderRadius: '$pill',
   color: '$textLink',
   transition: '$s1',
   userSelect: 'none',

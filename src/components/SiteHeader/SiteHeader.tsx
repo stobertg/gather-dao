@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Logo, AvatarList, MenuButton } from '@components'
+import { Logo, AvatarList, MenuButton, MenuUser } from '@components'
 
 // For the master container of the header
 // This holds a relative position 
@@ -65,7 +65,10 @@ export const SiteHeader = () => {
             { name: 'Ashley Ozburn' },
           ]}
         />  
-        <Side><MenuButton /></Side>
+        <Side>
+          <MenuButton />
+          <MenuUser />
+        </Side>
       </Nav>
     </Header>
 

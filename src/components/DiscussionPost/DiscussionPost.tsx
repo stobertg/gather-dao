@@ -23,7 +23,7 @@ const PostContent = styled('div', {
   position: 'relative',
   width: '87%',
   margin: '0 auto',
-  padding: '32px 0',
+  padding: '50px 0',
 
   // For the autospacing between the items within the post content
 

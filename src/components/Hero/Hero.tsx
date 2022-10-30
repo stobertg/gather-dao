@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from '@theme'
-import { Heading, Hex, HexContainer } from '@components'
+import { Heading, Hex, HexContainer, Button } from '@components'
 
 // For the master container of the hero component
 // This will always hold the image, but more often has the hex image on the bottom of the container
@@ -19,7 +19,7 @@ const HeroImage = styled('figure', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
-  maxHeight: 350,
+  maxHeight: 400,
   borderRadius: '$r2',
   overflow: 'hidden',
 
@@ -95,7 +95,7 @@ export const Hero = ({
   return(
 
     <>
-      <HeroWrap>
+      <HeroWrap> 
         <HeroImage><img src={ image } alt={ imageAlt } /></HeroImage>
         <HeroBottom><HexContainer /></HeroBottom>
       </HeroWrap>

@@ -47,7 +47,7 @@ const Avatar = styled(AvatarPrimitive.Root, {
   variants: {
     size: {
       l0: { width: 32, minWidth: 32, height: 32, minHeight: 32 },
-      l1: { width: 44, minWidth: 44, height: 44, minHeight: 44 }
+      l1: { width: 50, minWidth: 50, height: 50, minHeight: 50 }
     }
   }
 })
