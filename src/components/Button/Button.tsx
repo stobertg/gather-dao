@@ -32,7 +32,7 @@ import { ButtonBase } from './ButtonBase'
 // -------------- Typescript declarations -------------- //
 
 interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'disabled' | 'danger'
+  variant?: 'primary' | 'secondary' | 'disabled' | 'danger' | 'outline' | 'hasAvatar'
   size?: 'l0'
   title?: any
   icon?: any

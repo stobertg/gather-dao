@@ -45,6 +45,7 @@ interface AvatarProps {
   active?: boolean
   nameSize?: 'l0'
   nameOnly?: boolean
+  firstNameOnly?: boolean
   onClick?: React.MouseEventHandler<HTMLButtonElement>
   buttonVariant?: "primary" | "secondary" | "disabled" | "danger"
   chatThumb?: boolean
@@ -65,6 +66,7 @@ export const Avatar = ({
     date,
     active,
     nameOnly,
+    firstNameOnly,
     nameSize,
     onClick,
     buttonVariant,
@@ -79,7 +81,7 @@ export const Avatar = ({
         <Button variant={ buttonVariant } onClick={ () => onClick }>
           <AvatarWrap aria-label={ name || userName || cryptoAddress }>
             <AvatarImage {...{ image, name, userName, cryptoAddress, size, active, chatThumb }} />
-            <AvatarText {...{ name, userName, cryptoAddress, layout, nameHidden, notBold, timeStamp, date, nameOnly, nameSize }} />
+            <AvatarText {...{ name, userName, cryptoAddress, layout, nameHidden, notBold, timeStamp, date, nameOnly, firstNameOnly, nameSize }} />
           </AvatarWrap>
         </Button>
 
@@ -87,7 +89,7 @@ export const Avatar = ({
 
         <AvatarWrap aria-label={ name || userName || cryptoAddress }>
           <AvatarImage {...{ image, name, userName, cryptoAddress, size, active, chatThumb }} />
-          <AvatarText {...{ name, userName, cryptoAddress, layout, nameHidden, notBold, timeStamp, date, nameOnly, nameSize }} />
+          <AvatarText {...{ name, userName, cryptoAddress, layout, nameHidden, notBold, timeStamp, date, nameOnly, firstNameOnly, nameSize }} />
         </AvatarWrap>
 
       )}

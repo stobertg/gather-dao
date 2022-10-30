@@ -20,7 +20,8 @@ const MenuWrap = styled('button', {
   display: 'flex',
   alignItems: 'center',
   position: 'relative',
-  padding: '10px 16px',
+  height: 44,
+  padding: '0 16px',
   borderRadius: '$r1',
   border: '1px solid $gray700',
   fontFamily: '$sansSerif'

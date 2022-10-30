@@ -55,6 +55,7 @@ interface AvatarTextProps {
   timeStamp?: string
   nameSize?: 'l0'
   nameOnly?: boolean
+  firstNameOnly?: boolean
   active?: boolean
 }
 
@@ -71,6 +72,7 @@ export const AvatarText = ({
     date,
     active,
     nameOnly,
+    firstNameOnly,
     nameSize
   }:AvatarTextProps) => {
 
@@ -92,6 +94,9 @@ export const AvatarText = ({
                     <Heading size="l1" heavy title={ lastName } />
                   </> 
                 ) 
+                : firstNameOnly ? (
+                  <Heading heavy title={ firstName } />
+                )
                 : ( <Heading heavy title={`${ firstName } ${ lastName }`} /> )
               }
             </> 

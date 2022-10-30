@@ -2,15 +2,15 @@ import React from 'react'
 import { styled } from '@theme'
 import { Button, Avatar, Icon } from '@components'
 
-const MenuWrap = styled('div', {
+const MenuWrap = styled('button', {
   display: 'flex',
-  flexDirection: 'row',
+  justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-
-  '> *:not(:last-child)': {
-    marginRight: 8
-  }
+  width: 44,
+  height: 44,
+  background: '$border',
+  borderRadius: '50%',
 })
 
 interface UserProps {
@@ -22,16 +22,13 @@ interface UserProps {
 export const MenuUser = ({}:UserProps) => {
   return(
 
-    <Button>
-      <MenuWrap>
-        <Avatar 
-          nameHidden 
-          image="/monarchs/richardiii.jpg" 
-          name="Tyler Stober"
-        />
-        <Icon size="l0" icon="chevron-down" />
-      </MenuWrap>
-    </Button>
+    <MenuWrap>
+      <Avatar 
+        nameHidden
+        image="/monarchs/richardiii.jpg" 
+        name="Tyler Stober"
+      />
+    </MenuWrap>
 
   )
 }

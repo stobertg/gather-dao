@@ -44,7 +44,7 @@ export const AvatarList = ({
         { avatars.map(( avatar, i ) => (
 
           <li key={`avatar-${ i }`}>
-            <Button>
+            <Button variant="hasAvatar">
               <Avatar 
                 active={ avatar.active }
                 image={ avatar.image } 

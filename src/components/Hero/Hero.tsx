@@ -19,7 +19,7 @@ const HeroImage = styled('figure', {
   alignItems: 'center',
   position: 'relative',
   width: '100%',
-  maxHeight: 400,
+  maxHeight: 360,
   borderRadius: '$r2',
   overflow: 'hidden',
 
@@ -43,7 +43,7 @@ const HeroBottom = styled('div', {
   position: 'absolute',
   width: '100%',
   left: 0,
-  bottom: 0
+  bottom: 20
 })
 
 const HeroIntro = styled('div', {

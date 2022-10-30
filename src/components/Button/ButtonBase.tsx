@@ -2,6 +2,10 @@ import React from 'react'
 import { styled } from '@theme'
 import { Icon } from '@components'
 
+const ButtonStyle = {
+
+}
+
 // For the master container of the button
 // This is needed for custom buttons, where a button needs to preserve alignment and other features
 
@@ -30,8 +34,8 @@ const Button = styled('div', {
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
-  padding: '16px 20px',
-  borderRadius: '$pill',
+  padding: '8px 24px',
+  borderRadius: '$r1',
   color: '$textLink',
   transition: '$s1',
   userSelect: 'none',
@@ -41,7 +45,7 @@ const Button = styled('div', {
   // Meaning it doesn't look link a tradtional button
 
   '&:hover': { 
-    background: '$buttonSecondaryHover'
+    background: '$gray300'
   },
 
   // Here we auto mate the spacing for the contents within the button base
@@ -85,6 +89,20 @@ const Button = styled('div', {
         '&:hover': {
           background: '$buttonSecondaryHover'
         }
+      },
+
+      // For the button that only has an outlined border
+      // This is the same things as a ghost button
+
+      outline: {
+        border: '1px solid $border'
+      },
+
+      // This is the vairant for when an avatar is present with an Avatar component
+      // This is needed because the visual of the hover is a abit wonkey with the spacing to the left of the Avatar
+
+      hasAvatar: {
+        padding: '8px 20px 8px 12px'
       },
 
       danger: {
@@ -139,7 +157,7 @@ const ButtonIcon = styled('div', {
 // -------------- Typescript declarations -------------- //
 
 interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'disabled' | 'danger'
+  variant?: 'primary' | 'secondary' | 'disabled' | 'danger' | 'outline' | 'hasAvatar'
   size?: 'l0'
   title?: any
   icon?: any

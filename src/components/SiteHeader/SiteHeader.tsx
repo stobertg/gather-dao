@@ -41,7 +41,16 @@ const Nav = styled('nav', {
 
 const Side = styled('div', {
   display: 'flex',
-  width: '20%'
+  flexDirection: 'row',
+  alignItems: 'center',
+  width: '20%',
+
+  // For the auto spacing of any of the content within the container
+  // This adds the spacing to the right of each container, except for the last container
+
+  '> *:not(:last-child)': {
+    marginRight: 12
+  }
 })
 
 // ---------- This is the end of declarations ---------- //
