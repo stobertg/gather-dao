@@ -54,9 +54,9 @@ const AvatarName = styled('span', {
 const TimeStamp = styled('div', {
   position: 'relative',
   marginTop: 4,
-  color: '$gray700',
+  color: '$gray200',
   fontFamily: '$sansSerif',
-  fontSize: 12,
+  fontSize: '$s1',
 
   // For the spacing 
 
@@ -112,13 +112,13 @@ export const AvatarText = ({
             name ? ( 
               <>
                 { 
-                  notBold ? ( <><span>{ firstName }</span> <span>{ lastName }</span></> )
+                  notBold ? ( <><Heading title={ firstName } /><Heading title={ lastName } /></> )
                   : layout == 'stacked' ? ( <><span>{ firstName }</span> <span><strong>{ lastName }</strong></span></> ) 
-                  : ( <strong><span>{ firstName }</span> <span>{ lastName }</span></strong> )
+                  : ( <><Heading heavy title={ firstName } /><Heading heavy title={ lastName } /></> )
                 }
               </> 
             ) 
-            : userName ? ( <Heading title={ userName } bold /> ) 
+            : userName ? ( <Heading heavy title={ userName } /> ) 
             : ( <strong>{ truncateCryptoAddress( cryptoAddress ) }</strong> )
           }
         </AvatarName>
@@ -137,7 +137,7 @@ export const AvatarText = ({
                     }
                   </> 
                 ) 
-                : userName ? ( <Heading title={ userName } bold /> ) 
+                : userName ? ( <Heading heavy title={ userName } /> ) 
                 : ( <strong>{ truncateCryptoAddress( cryptoAddress ) }</strong> )
               }
 

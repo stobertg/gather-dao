@@ -24,7 +24,7 @@ const SiteContent = styled('div', {
   position: 'relative',
   width: '100%',
   margin: '0 auto',
-  padding: '150px 0 50px',
+  padding: '120px 0 50px',
 
   // The only variant option for this component is to automate the spacing between content blocks within the site
   // This will eventally space out all of the content for consistancy between blocks

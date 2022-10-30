@@ -28,8 +28,8 @@ export const HexContainer = () => {
   return(
 
     <HexContain>
-      <Hex size="l1" image="/monarchs/richardiii.jpeg" />
-      <Hex size="l0" background="gunMetal" content="icon" image="/roses/york-rose.svg" />
+      <Hex size="l1" image="/monarchs/richardiii.jpg" imageAlt="Richard III" />
+      <Hex size="l0" background="black" content="icon" image="/roses/york-rose.svg" imageAlt="Richard III" />
     </HexContain>
     
   )

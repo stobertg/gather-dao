@@ -7,10 +7,6 @@ import { styled } from '@theme'
 const HeadingWrap = styled('div', {
   position: 'relative',
 
-  strong: {
-    fontFamily: '$sansSerifBold',
-  },
-
   // For the different font sizes supported within the headings of the site
 
   variants: {
@@ -42,6 +38,10 @@ const HeadingWrap = styled('div', {
   }
 })
 
+const FontHeavy = styled('strong', {
+  fontFamily: '$sansSerifHeavy'
+})
+
 // -------------- Typescript declarations -------------- //
 
 interface HeadingProps {
@@ -49,6 +49,7 @@ interface HeadingProps {
   color?: 'gray' | 'white' | 'purple'
   title: any
   bold?: boolean
+  heavy?: boolean
   font?: 'code'
 }
 
@@ -59,7 +60,8 @@ export const Heading = ({
     font,
     color,
     title,
-    bold
+    bold,
+    heavy
   }:HeadingProps) => {
   
   return(
@@ -67,7 +69,15 @@ export const Heading = ({
     <HeadingWrap {...{ size, color }}>
       { font == 'code' 
         ? ( <span style={{ fontFamily: 'Source Code Pro' }}>{ title }</span> ) 
-        : ( <>{ bold ? ( <strong>{ title }</strong> ) : ( <>{ title }</> )}</> )
+        : ( 
+            <>
+              { 
+                bold ? ( <strong>{ title }</strong> ) : 
+                heavy ? ( <FontHeavy>{ title }</FontHeavy> ) : 
+                <>{ title }</> 
+              }
+            </> 
+          )
       }
     </HeadingWrap>
     

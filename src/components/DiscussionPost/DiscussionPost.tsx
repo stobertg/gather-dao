@@ -66,7 +66,7 @@ export const DiscussionPost = ({
           />
         </PostHeader>
         
-        <Text fontSize="l1">
+        <Text>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt metus mi, vitae varius ligula laoreet in. 
             Donec eget convallis arcu. Mauris vitae purus mauris. Donec lobortis odio sit amet augue posuere vulputate. 

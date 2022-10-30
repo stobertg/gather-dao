@@ -39,7 +39,7 @@ export const Chat = ({
   return(
 
     <ChatContainer>
-      <ChatHeader userActive={ true } name="Tyler Stober" />
+      <ChatHeader active={ true } name="Tyler Stober" />
       <ChatMain>
         <ChatMessages 
           messages={[

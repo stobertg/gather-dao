@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import { SiteContainer, Block, BlockItem, ProjectInfo, Tabs, Code } from '@components'
 import { CodeBlue, CodeGreen, CodeOrange } from '@codeColors'
-import { ColorSwatchList } from '../../components/ColorSwatch/ColorSwatchList'
-import { ColorSwatchesLight } from '../../components/ColorSwatch/Parts/lightTheme'
+import { ColorSwatchList } from '../../../components/ColorSwatch/ColorSwatchList'
+import { ColorSwatchesLight } from '../../../components/ColorSwatch/Parts/lightTheme'
 
 const Page: NextPage = () => {
   return (

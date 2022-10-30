@@ -27,13 +27,12 @@ const BlockItemContent = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   position: 'relative',
+  margin: '0 auto',
+  width: '100%',
 
   variants: {
     width: {
-      medium: { 
-        maxWidth: 'calc(800px - 10%)',
-        width: '90%'
-      }
+      medium: { maxWidth: 700 }
     }
   }
 })

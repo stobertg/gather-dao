@@ -45,6 +45,7 @@ const BlockContent = styled('div', {
     outline: {
       true: {
         padding: 20,
+        width: '100%',
         borderRadius: '$r3',
         border: '1px solid $border'
       }

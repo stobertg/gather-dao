@@ -31,7 +31,7 @@ const HexContain = styled('div', {
     },
 
     background: {
-      gunMetal: { svg:{ fill: '$gunMetal' }},
+      black: { svg:{ fill: '$bgSecondary' }},
       gray: { svg:{ fill: '$gray800' }}
     }
   }
@@ -69,19 +69,20 @@ const HexImage = styled('div', {
 interface HexProps {
   size?: 'l0' | 'l1' | 'l2'
   image: string,
-  background?: 'gunMetal' | 'gray'
+  imageAlt: string
+  background?: 'black' | 'gray'
   content?: 'icon'
 }
 
 // ---------- This is the end of declarations ---------- //
 
-export const Hex = ({ size, background, image, content }: HexProps) => {
+export const Hex = ({ size, background, image, imageAlt, content }: HexProps) => {
   
   return(
 
     <HexContain {...{ size, background }}>
       <HexImage {...{ content }}>
-        <img src={ image } />
+        <img src={ image } alt={ imageAlt } />
       </HexImage>
 
       <svg viewBox="0 0 351 386.7">
